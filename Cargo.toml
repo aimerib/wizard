@@ -1,0 +1,34 @@
+[package]
+name = "wizard"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "3.1.6", features = ["derive", "color"] }
+crossterm = "0.23.0"
+bollard = "0.12.0"
+tui = "0.17.0"
+tokio = { version = "1.7", features = ["fs", "rt-multi-thread", "macros", "process"] }
+owo-colors = "3.2.0"
+futures-util = "0.3.21"
+whoami = "1.2.1"
+async-std = "1.10.0"
+futures-lite = "1.12.0"
+termion = "*"
+docker-compose-types = "0.1.5"
+serde = "1.0"
+serde_yaml = "0.8.23"
+indexmap = "1.8.0"
+flate2 = "1.0.22"
+tar = "0.4.38"
+shell-words = "1.0.0"
+ipgen = "1"
+uuid = { version = "0.8", features = ["v4"] }
+sha2 = "0.10.2"
+indicatif = "0.16.2"
+clap_complete = "3.1.1"
+tokio-stream = "0.1.8"
+[dev-dependencies]
+tokio-test = "*"

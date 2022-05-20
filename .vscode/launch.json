@@ -1,0 +1,88 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'wizard'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=wizard",
+          "--package=wizard"
+        ],
+        "filter": {
+          "name": "wizard",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug subcommand start",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=wizard",
+          "--package=wizard"
+        ],
+        "filter": {
+          "name": "wizard",
+          "kind": "bin"
+        }
+      },
+      "args": ["start"],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug subcommand 'status'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=wizard",
+          "--package=wizard"
+        ],
+        "filter": {
+          "name": "wizard",
+          "kind": "bin"
+        }
+      },
+      "args": ["--stats"],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "attach",
+      "name": "Attach",
+      "program": "${workspaceFolder}/target/debug/wizard",
+      "externalConsole": true,
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'wizard'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=wizard",
+          "--package=wizard"
+        ],
+        "filter": {
+          "name": "wizard",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
